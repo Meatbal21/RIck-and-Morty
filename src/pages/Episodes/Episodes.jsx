@@ -1,12 +1,21 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Episodes.css'
 import axios from 'axios'
 import CharacterCard from '../../components/CharacterCard/CharacterCard'
-CharacterCard
+import { ThemeContext } from '../../contexts/ThemeContext'
+
+
+
 //api to use
 //https://rickandmortyapi.com/api/episode
 
 function Episodes() {
+  //change to global state
+  //NOTE {} not []
+
+  const {darkMode, setDarkMode} = useContext(ThemeContext)
+
+
   //create state for numbers
   const[options, setOptions] = React.useState ([])
   //create state to hold option selected
@@ -85,7 +94,7 @@ function Episodes() {
 
   )
   return (
-    <div className='episodes-container'>
+    <div className={darkMode?"episodes-container episodes-dark" : "episodes-container"}>
       <div>
         <label>Select an epidode:</label>
         <select id='select-episode' onChange={handleSelectChange}>

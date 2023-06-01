@@ -8,12 +8,15 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import About from './pages/About/About'
 import Episodes from './pages/Episodes/Episodes'
 import CharacterDetails from './pages/CharachterDetails/CharacterDetails'
+import ThemeContextProvider from './contexts/ThemeContext'
+ThemeContextProvider
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
+    <ThemeContextProvider>
       <Header />
 
       <Routes>
@@ -26,6 +29,7 @@ function App() {
       
 
       <Footer />
+      </ThemeContextProvider>
     </BrowserRouter>
   )
 }

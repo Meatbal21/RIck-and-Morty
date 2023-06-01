@@ -5,6 +5,9 @@
     background-color: black;
     color:white;
  }
+ .about-container img{
+    width: 100%;
+ }
 
 .about-container h1{
     padding: 20px;
