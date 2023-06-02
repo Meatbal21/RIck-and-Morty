@@ -9,7 +9,8 @@ import About from './pages/About/About'
 import Episodes from './pages/Episodes/Episodes'
 import CharacterDetails from './pages/CharachterDetails/CharacterDetails'
 import ThemeContextProvider from './contexts/ThemeContext'
-ThemeContextProvider
+import Favorites from './pages/Favorites/Favorites'
+import FavoritesContextProvider from './contexts/FavoritesContext'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,18 +18,21 @@ function App() {
   return (
     <BrowserRouter>
     <ThemeContextProvider>
-      <Header />
+      <FavoritesContextProvider>
+        <Header />
 
-      <Routes>
-        <Route path='/' element={<Homepage />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/details/:characterId' element={<CharacterDetails />} />
-        <Route path='/episodes' element={<Episodes />} />
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/favorites' element={<Favorites/>} />
+          <Route path='/details/:characterId' element={<CharacterDetails />} />
+          <Route path='/episodes' element={<Episodes />} />
 
-      </Routes>
+        </Routes>
       
 
-      <Footer />
+        <Footer />
+      </FavoritesContextProvider>
       </ThemeContextProvider>
     </BrowserRouter>
   )
