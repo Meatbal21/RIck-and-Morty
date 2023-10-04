@@ -99,7 +99,7 @@ function Episodes() {
         <label>Select an epidode:</label>
         <select id='select-episode' onChange={handleSelectChange}>
            {
-            options.map(num=><option key={num} value={num}>{`Episode ${num}`}</option>)
+            um=options.map(n><option key={num} value={num}>{`Episode ${num}`}</option>)
            }
         </select>
       </div>

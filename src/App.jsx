@@ -9,7 +9,7 @@ import About from './pages/About/About'
 import Episodes from './pages/Episodes/Episodes'
 import CharacterDetails from './pages/CharachterDetails/CharacterDetails'
 import ThemeContextProvider from './contexts/ThemeContext'
-import Favorites from './pages/Favorites/Favorites'
+import Favorites from './pages/Favorite/Favorites'
 import FavoritesContextProvider from './contexts/FavoritesContext'
 
 function App() {
